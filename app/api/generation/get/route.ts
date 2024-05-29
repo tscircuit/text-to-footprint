@@ -11,6 +11,14 @@ export const GET = async (req) => {
     return new Response("Missing OPENAI_API_KEY", { status: 500 })
   }
 
+  if (!text) {
+    return NextResponse.json({
+      text_input: "",
+      footprinter_input: "",
+      soup: [],
+    })
+  }
+
   const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
   })
@@ -26,7 +34,6 @@ export const GET = async (req) => {
   })
 
   const footprint = completion.choices[0]?.message?.content!
-  console.log(footprint)
 
   let soup
   try {
@@ -35,6 +42,7 @@ export const GET = async (req) => {
     console.log(`Invalid footprint: ${footprint}`)
     return NextResponse.json({
       text_input: text,
+      footprinter_input: footprint,
       soup: [],
     })
   }
@@ -42,6 +50,7 @@ export const GET = async (req) => {
   return NextResponse.json(
     {
       text_input: text,
+      footprinter_input: footprint,
       soup,
     },
     {

@@ -25,11 +25,12 @@ export default () => {
         paddingTop: 32,
       }}
     >
-      <div>
+      <div style={{ display: "flex", flexDirection: "column" }}>
         <textarea
           style={{ width: 400, height: 80 }}
           onChange={(e) => setTextInput(e.target.value)}
         />
+        <div style={{ color: "gray" }}>{data?.footprinter_input}</div>
       </div>
       <div style={{ height: 600, width: "100%", marginTop: 40 }}>
         {data && data.text_input === textInput && (
