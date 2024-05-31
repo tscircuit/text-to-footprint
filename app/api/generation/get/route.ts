@@ -39,7 +39,7 @@ export const GET = async (req) => {
 
   const footprint = completion.choices[0]?.message?.content!
 
-  let soup
+  let soup: any
   try {
     soup = fp.string(footprint).soup()
   } catch (e: any) {
