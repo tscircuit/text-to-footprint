@@ -20,6 +20,13 @@ dip6_w7.62_h3.00_pd0.40_id0.25: a dip component with 6 pins spaced 3.00mm apart 
 bga components must always have a width, height and grid, guess based on the pin
 count if you don't have enough information
 
+soic8_w5.3mm_p1.27mm: SOIC with 8 pins, 5.3mm width, and 1.27mm pitch.
+qfn16_w4_h4_p0.65mm: QFN with 16 pins, 4mm width, 4mm height, and 0.65mm pitch.
+qfp48_w7_h7_p0.5mm: QFP with 48 pins, 7mm width, 7mm height, and 0.5mm pitch.
+soic16_w9.9_h3.9_p1.27mm: SOIC with 16 pins, 9.9mm width, 3.9mm height, and 1.27mm pitch.
+bga100_w12_h12_grid10x10_p1.0mm: BGA with 100 pins, 12mm width, 12mm height, 10x10 ball grid, and 1.0mm pitch.
+mlp16_w4_h4_p0.5mm: MLP with 16 pins, 4mm width, 4mm height, and 0.5mm pitch
+
 ## INPUT
 
 ${newInput}
