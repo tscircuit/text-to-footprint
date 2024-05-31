@@ -33,11 +33,13 @@ export default () => {
             This is a technical preview of{" "}
             <a href="https://tscircuit.com">tscircuit</a> text-to-footprint.{" "}
             <br />
-            <div style={{ display: "flex", gap: 4 }}>
+            <div style={{ display: "flex", gap: 8 }}>
               <a href="https://github.com/tscircuit/tscircuit/issues">
                 file issue
               </a>
-              <a href="">upvote kicad export</a>
+              <a href="https://github.com/tscircuit/tscircuit/issues/156">
+                upvote kicad export
+              </a>
               <a href="https://github.com/tscircuit/footprinter">contribute</a>
             </div>
           </div>
