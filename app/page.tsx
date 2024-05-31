@@ -42,7 +42,7 @@ export default () => {
             <div
               style={{ cursor: "pointer", color: "blue" }}
               onClick={() => {
-                setTextInput("12 pin SOIC")
+                setTextInput("72 pin square bga component")
               }}
             >
               example2
@@ -96,6 +96,10 @@ export default () => {
                   is coming soon (with projected capability to create 99%+ of
                   footprints)
                 </li>
+                <li>
+                  You can't currently paste in part numbers, but this is trivial
+                  and coming soon
+                </li>
               </ul>
               <br />
             </div>
@@ -106,6 +110,7 @@ export default () => {
           value={textInput}
           onChange={(e) => setTextInput(e.target.value)}
         />
+        <div style={{ color: "red" }}>{data?.error?.message}</div>
         <div
           style={{
             color: "gray",

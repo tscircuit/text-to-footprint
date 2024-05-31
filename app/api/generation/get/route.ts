@@ -44,6 +44,9 @@ export const GET = async (req) => {
     return NextResponse.json({
       text_input: text,
       footprinter_input: footprint,
+      error: {
+        message: "could not create footprint",
+      },
       soup: [],
     })
   }
