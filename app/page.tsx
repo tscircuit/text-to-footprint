@@ -6,7 +6,9 @@ import { useQuery } from "react-query"
 import { useDebounce } from "use-debounce"
 
 export default () => {
-  const [textInput, setTextInput] = useState("")
+  const [textInput, setTextInput] = useState(
+    "a qfp component with 24 pins and 0.8mm pitch and a thermal pad"
+  )
   const [delayedInput] = useDebounce(textInput, 400)
   const { data } = useQuery(["/generation/get", delayedInput], async () => {
     const res = await fetch(
@@ -26,11 +28,92 @@ export default () => {
       }}
     >
       <div style={{ display: "flex", flexDirection: "column" }}>
+        <div style={{ opacity: 0.7, paddingBottom: 16 }}>
+          This is a technical preview of tscircuit text-to-footprint
+          <div style={{ display: "flex", gap: "4px", paddingTop: 4 }}>
+            <div
+              style={{ cursor: "pointer", color: "blue" }}
+              onClick={() => {
+                setTextInput("a 16 pin wide dip component")
+              }}
+            >
+              example1
+            </div>
+            <div
+              style={{ cursor: "pointer", color: "blue" }}
+              onClick={() => {
+                setTextInput("12 pin SOIC")
+              }}
+            >
+              example2
+            </div>
+            <div
+              style={{ cursor: "pointer", color: "blue" }}
+              onClick={() => {
+                setTextInput(
+                  "a qfn component with 24 pins and 0.8mm pitch and a thermal pad, pins are counter clockwise starting from the top right corner"
+                )
+              }}
+            >
+              example3
+            </div>
+          </div>
+          <details style={{ paddingTop: 8 }}>
+            <summary>Capabilities & Limitations</summary>
+            <div style={{ width: 600 }}>
+              This text-to-footprint system is optimized for creating footprints
+              that can easily be copied and pasted into tscircuit. <br />
+              <br />
+              It saves electronics engineers hours on each datasheet translation
+              they have to do. You can adjust starting pins, pitch, pad size,
+              pad shape, width and many other parameters for a wide variety of
+              standard components.
+              <br />
+              <br />
+              <ul>
+                <li>
+                  Generate standard or semi-standard footprints for the majority
+                  of packages
+                </li>
+                <li>
+                  Generate ~70% of the{" "}
+                  <a href="https://gitlab.com/kicad/libraries/kicad-footprints">
+                    Kicad Component Catalog
+                  </a>{" "}
+                  (WIP)
+                </li>
+                <li>
+                  Intelligently guess missing dimensions using electronics
+                  engineering knowledge
+                </li>
+                <br />
+                <div style={{ fontWeight: "bold" }}>LIMITATIONS</div>
+                <li>
+                  Cannot read datasheets, datasheet-to-footprint in progress
+                </li>
+                <li>
+                  Not multi-modal, vision model for parsing engineering diagrams
+                  is coming soon (with projected capability to create 99%+ of
+                  footprints)
+                </li>
+              </ul>
+              <br />
+            </div>
+          </details>
+        </div>
         <textarea
           style={{ width: 400, height: 80 }}
+          value={textInput}
           onChange={(e) => setTextInput(e.target.value)}
         />
-        <div style={{ color: "gray" }}>{data?.footprinter_input}</div>
+        <div
+          style={{
+            color: "gray",
+            fontFamily: "monospace",
+            whiteSpace: "pre",
+            paddingTop: 4,
+          }}
+        >{`// paste into tscircuit\n<component footprint="${data?.footprinter_input}" />`}</div>
       </div>
       <div style={{ height: 600, width: "100%", marginTop: 40 }}>
         {data && data.text_input === textInput && (

@@ -24,7 +24,7 @@ export const GET = async (req) => {
   })
 
   const completion = await openai.chat.completions.create({
-    model: "gpt-3.5-turbo",
+    model: "gpt-4o",
     messages: [
       {
         role: "user",
@@ -38,8 +38,9 @@ export const GET = async (req) => {
   let soup
   try {
     soup = fp.string(footprint).soup()
-  } catch (e) {
+  } catch (e: any) {
     console.log(`Invalid footprint: ${footprint}`)
+    console.log(e.toString())
     return NextResponse.json({
       text_input: text,
       footprinter_input: footprint,

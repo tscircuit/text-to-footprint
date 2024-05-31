@@ -21,11 +21,18 @@ bga components must always have a width, height and grid, guess based on the pin
 count if you don't have enough information
 
 soic8_w5.3mm_p1.27mm: SOIC with 8 pins, 5.3mm width, and 1.27mm pitch.
-qfn16_w4_h4_p0.65mm: QFN with 16 pins, 4mm width, 4mm height, and 0.65mm pitch.
+qfn16_w4_h4_p0.65mm_thermalpad: QFN with 16 pins, 4mm width, 4mm height, and 0.65mm pitch and a thermal pad
 qfp48_w7_h7_p0.5mm: QFP with 48 pins, 7mm width, 7mm height, and 0.5mm pitch.
 soic16_w9.9_h3.9_p1.27mm: SOIC with 16 pins, 9.9mm width, 3.9mm height, and 1.27mm pitch.
 bga100_w12_h12_grid10x10_p1.0mm: BGA with 100 pins, 12mm width, 12mm height, 10x10 ball grid, and 1.0mm pitch.
 mlp16_w4_h4_p0.5mm: MLP with 16 pins, 4mm width, 4mm height, and 0.5mm pitch
+
+qfn16_w2_h2_p0.4mm_startingpin(topside,leftpin)_ccw: QFN with 16 pins, 2mm width, 2mm height, 0.4mm pitch, and starting pin at the top left corner
+qfp8_w2_h2_pl0.6mm_pw_0.3mm: QFP with 8 pins, 2mm width, 2mm height, 0.6mm pad length, 0.3mm pad width
+
+## TIPS
+
+- It is okay to omit parameters in SHORT_FP, SHORT_FP is forgiving with inputs
 
 ## INPUT
 
