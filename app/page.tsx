@@ -119,6 +119,12 @@ export default () => {
                   You can't currently paste in part numbers, but this is coming
                   very soon
                 </li>
+                <li>
+                  Accuracy is not guaranteed. DO NOT USE TECHNICAL PREVIEW FOR
+                  REAL APPLICATIONS. I am working on benchmarks to ensure
+                  accuracy, but before that we need to be able to create the
+                  majority of shapes
+                </li>
               </ul>
               <br />
             </div>
