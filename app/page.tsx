@@ -32,8 +32,7 @@ export default () => {
           <div style={{ paddingBottom: 8 }}>
             This is a technical preview of{" "}
             <a href="https://tscircuit.com">tscircuit</a> text-to-footprint.{" "}
-            <br />
-            <div style={{ display: "flex", gap: 8 }}>
+            <div style={{ display: "flex", gap: 8, marginTop: 12 }}>
               <a href="https://github.com/tscircuit/tscircuit/issues">
                 file issue
               </a>
@@ -41,6 +40,12 @@ export default () => {
                 upvote kicad export
               </a>
               <a href="https://github.com/tscircuit/footprinter">contribute</a>
+              <a href="https://github.com/tscircuit/tscircuit">
+                <img
+                  src="https://img.shields.io/github/stars/tscircuit/tscircuit"
+                  alt="GitHub Stars"
+                />
+              </a>
             </div>
           </div>
           <div style={{ display: "flex", gap: "4px", paddingTop: 4 }}>
