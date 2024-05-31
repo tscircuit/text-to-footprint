@@ -23,8 +23,12 @@ export const GET = async (req) => {
     apiKey: process.env.OPENAI_API_KEY,
   })
 
+  const is_tscircuit_domain = req.headers
+    .get("origin")
+    ?.includes("tscircuit.com")
+
   const completion = await openai.chat.completions.create({
-    model: "gpt-4o",
+    model: is_tscircuit_domain ? "gpt-3.5-turbo" : "gpt-4o",
     messages: [
       {
         role: "user",

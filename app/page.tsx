@@ -29,8 +29,18 @@ export default () => {
     >
       <div style={{ display: "flex", flexDirection: "column" }}>
         <div style={{ opacity: 0.7, paddingBottom: 16 }}>
-          This is a technical preview of{" "}
-          <a href="https://tscircuit.com">tscircuit</a> text-to-footprint
+          <div style={{ paddingBottom: 8 }}>
+            This is a technical preview of{" "}
+            <a href="https://tscircuit.com">tscircuit</a> text-to-footprint.{" "}
+            <br />
+            <div style={{ display: "flex", gap: 4 }}>
+              <a href="https://github.com/tscircuit/tscircuit/issues">
+                file issue
+              </a>
+              <a href="">upvote kicad export</a>
+              <a href="https://github.com/tscircuit/footprinter">contribute</a>
+            </div>
+          </div>
           <div style={{ display: "flex", gap: "4px", paddingTop: 4 }}>
             <div
               style={{ cursor: "pointer", color: "blue" }}
@@ -65,10 +75,10 @@ export default () => {
               This text-to-footprint system is optimized for creating footprints
               that can easily be copied and pasted into tscircuit. <br />
               <br />
-              It saves electronics engineers hours on each datasheet translation
-              they have to do. You can adjust starting pins, pitch, pad size,
-              pad shape, width and many other parameters for a wide variety of
-              standard components.
+              It could save electronics engineers hours on each datasheet
+              translation they have to do. You can adjust starting pins, pitch,
+              pad size, pad shape, width and many other parameters for a wide
+              variety of standard components.
               <br />
               <br />
               <ul>
@@ -77,7 +87,8 @@ export default () => {
                   of packages
                 </li>
                 <li>
-                  Generate ~70% of the{" "}
+                  Generate from typical footprint descriptions, e.g. the names
+                  inside the
                   <a href="https://gitlab.com/kicad/libraries/kicad-footprints">
                     Kicad Component Catalog
                   </a>{" "}
