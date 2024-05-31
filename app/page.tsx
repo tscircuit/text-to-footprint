@@ -29,7 +29,8 @@ export default () => {
     >
       <div style={{ display: "flex", flexDirection: "column" }}>
         <div style={{ opacity: 0.7, paddingBottom: 16 }}>
-          This is a technical preview of tscircuit text-to-footprint
+          This is a technical preview of{" "}
+          <a href="https://tscircuit.com">tscircuit</a> text-to-footprint
           <div style={{ display: "flex", gap: "4px", paddingTop: 4 }}>
             <div
               style={{ cursor: "pointer", color: "blue" }}
@@ -93,12 +94,12 @@ export default () => {
                 </li>
                 <li>
                   Not multi-modal, vision model for parsing engineering diagrams
-                  is coming soon (with projected capability to create 99%+ of
-                  footprints)
+                  is coming soon (this should allow it to create the vast
+                  majority of component footprints)
                 </li>
                 <li>
-                  You can't currently paste in part numbers, but this is trivial
-                  and coming soon
+                  You can't currently paste in part numbers, but this is coming
+                  very soon
                 </li>
               </ul>
               <br />
