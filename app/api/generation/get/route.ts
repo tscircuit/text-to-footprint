@@ -38,11 +38,12 @@ export const GET = async (req) => {
     ],
   })
 
-  const footprint = completion.choices[0]?.message?.content!
+  // sometimes the AI inserts ":" in the message
+  const footprint = completion.choices[0]?.message?.content!.split(":")[0]
 
   let soup: any
   try {
-    soup = fp.string(footprint).soup()
+    soup = fp.string(footprint!).soup()
   } catch (e: any) {
     console.log(`Invalid footprint: ${footprint}`)
     console.log(e.toString())
