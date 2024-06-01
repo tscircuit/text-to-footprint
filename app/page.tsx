@@ -33,11 +33,11 @@ export default () => {
             This is a technical preview of{" "}
             <a href="https://tscircuit.com">tscircuit</a> text-to-footprint.{" "}
             <div style={{ display: "flex", gap: 8, marginTop: 12 }}>
+              <div>
+                by <a href="https://x.com/seveibar">@seveibar</a>
+              </div>
               <a href="https://github.com/tscircuit/tscircuit/issues">
                 file issue
-              </a>
-              <a href="https://github.com/tscircuit/tscircuit/issues/156">
-                upvote kicad export
               </a>
               <a href="https://github.com/tscircuit/footprinter">contribute</a>
               <a href="https://github.com/tscircuit/tscircuit">
@@ -116,8 +116,8 @@ export default () => {
                   majority of component footprints)
                 </li>
                 <li>
-                  You can't currently paste in part numbers, but this is coming
-                  very soon
+                  Pasting manufacturer part numbers is very low accuracy
+                  currently
                 </li>
                 <li>
                   Accuracy is not guaranteed. DO NOT USE TECHNICAL PREVIEW FOR
