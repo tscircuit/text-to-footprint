@@ -41,6 +41,6 @@ bga32: BGA component with 32 pins
 
 ## INPUT
 
-${newInput}
+${newInput.slice(0, 200)}
 
 `.trim()

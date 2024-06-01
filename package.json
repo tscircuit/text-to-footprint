@@ -7,7 +7,11 @@
   "scripts": {
     "dev": "next dev",
     "start": "next dev",
-    "build": "next build"
+    "build": "next build",
+    "db:migrate": "seam-pgm migrate",
+    "db:reset": "seam-pgm reset",
+    "db:generate": "seam-pgm generate",
+    "db:create-migration": "seam-pgm create-migration"
   },
   "keywords": [],
   "author": "",
@@ -18,7 +22,8 @@
     "@types/node": "20.12.12",
     "@types/react": "18.3.3",
     "next": "^14.2.3",
-    "seam-pgm": "^1.3.2"
+    "seam-pgm": "^1.3.2",
+    "zapatos": "^6.4.0"
   },
   "dependencies": {
     "@ai-sdk/openai": "^0.0.17",
