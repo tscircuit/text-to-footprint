@@ -1,8 +1,8 @@
 import { ContextProviders } from "../components/ContextProviders"
 
 export const metadata = {
-  title: "tscircuit - auto footprint",
-  description: "AI Automatic footprint using tscircuit",
+  title: "tscircuit - AI text-to-footprint",
+  description: "AI footprint generator using tscircuit",
 }
 
 export default function RootLayout({
