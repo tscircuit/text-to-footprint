@@ -25,15 +25,18 @@ export default () => {
         justifyContent: "center",
         alignItems: "center",
         paddingTop: 32,
-        marginLeft: 8,
-        marginRight: 8,
+        maxWidth: "99vw",
       }}
     >
-      <div style={{ display: "flex", flexDirection: "column" }}>
+      <div
+        style={{ display: "flex", flexDirection: "column", maxWidth: "99vw" }}
+      >
         <div style={{ opacity: 0.7, paddingBottom: 16 }}>
-          <div style={{ paddingBottom: 8 }}>
+          <div style={{ paddingBottom: 8, maxWidth: "min(400px, 80vw)" }}>
             This is a technical preview of{" "}
             <a href="https://tscircuit.com">tscircuit</a> text-to-footprint.{" "}
+            Type a package description of footprint below and a footprint will
+            automatically be generated.
             <div
               style={{
                 display: "flex",
@@ -87,7 +90,7 @@ export default () => {
           </div>
           <details style={{ paddingTop: 8 }}>
             <summary>Capabilities & Limitations</summary>
-            <div style={{ maxWidth: 600 }}>
+            <div style={{ maxWidth: "min(600px, 80vw)" }}>
               This text-to-footprint system is optimized for creating footprints
               that can easily be copied and pasted into tscircuit. <br />
               <br />
@@ -140,7 +143,7 @@ export default () => {
           </details>
         </div>
         <textarea
-          style={{ width: 400, height: 80 }}
+          style={{ width: "min(400px, 80vw)", height: 80 }}
           value={textInput}
           onChange={(e) => setTextInput(e.target.value)}
         />
