@@ -100,6 +100,12 @@ export default () => {
               variety of standard components.
               <br />
               <br />
+              <b>
+                Note: you can press "d" while hovering your mouse over the pcb
+                viewer to check dimensions
+              </b>
+              <br />
+              <br />
               <ul>
                 <li>
                   Generate standard or semi-standard footprints for the majority
