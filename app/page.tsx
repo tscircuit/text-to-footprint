@@ -25,6 +25,8 @@ export default () => {
         justifyContent: "center",
         alignItems: "center",
         paddingTop: 32,
+        marginLeft: 8,
+        marginRight: 8,
       }}
     >
       <div style={{ display: "flex", flexDirection: "column" }}>
@@ -32,7 +34,14 @@ export default () => {
           <div style={{ paddingBottom: 8 }}>
             This is a technical preview of{" "}
             <a href="https://tscircuit.com">tscircuit</a> text-to-footprint.{" "}
-            <div style={{ display: "flex", gap: 8, marginTop: 12 }}>
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                gap: 8,
+                marginTop: 12,
+              }}
+            >
               <div>
                 by <a href="https://x.com/seveibar">@seveibar</a>
               </div>
@@ -78,7 +87,7 @@ export default () => {
           </div>
           <details style={{ paddingTop: 8 }}>
             <summary>Capabilities & Limitations</summary>
-            <div style={{ width: 600 }}>
+            <div style={{ maxWidth: 600 }}>
               This text-to-footprint system is optimized for creating footprints
               that can easily be copied and pasted into tscircuit. <br />
               <br />
