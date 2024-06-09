@@ -32,7 +32,8 @@ qfn16_w2_h2_p0.4mm_startingpin(topside,rightpin): QFN with 16 pins, 2mm width, 2
 qfn16_w2_h2_p0.4mm_startingpin(rightside,bottompin): QFN with 16 pins, 2mm width, 2mm height, 0.4mm pitch, and starting pin at the bottom right corner (on the right side)
 qfp8_w2_h2_pl0.6mm_pw_0.3mm: QFP with 8 pins, 2mm width, 2mm height, 0.6mm pad length, 0.3mm pad width
 
-bga32: BGA component with 32 pins
+bga32: Ball Grid Array component with 32 pins
+dfn8_w8_h2_p1.27mm: Dual Flat No-lead with 8 pins, 8mm width, 2mm height, and 1.27mm pitch
 
 ## TIPS
 
